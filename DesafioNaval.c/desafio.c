@@ -42,3 +42,13 @@ int main() {
     tabuleiro[2][2] = 3;
     tabuleiro[4][4] = 3;
     tabuleiro[6][6] = 3;
+
+     // Matriz de habilidade Cone (5x5)
+    int cone[5][5];
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j < 5; j++) {
+            // Forma de cone: mais estreito no topo e mais largo na base
+            if(j >= 2 - i && j <= 2 + i) cone[i][j] = 1;
+            else cone[i][j] = 0;
+        }
+    }
