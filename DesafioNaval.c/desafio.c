@@ -24,3 +24,13 @@ void aplicarHabilidade(int tabuleiro[SIZE][SIZE], int habilidade[5][5], int orig
         for(int j = 0; j < tamanho; j++) {
             int linhaTab = origemLinha - meio + i;
             int colTab = origemColuna - meio + j;
+
+            // Verifica se está dentro dos limites do tabuleiro
+            if(linhaTab >= 0 && linhaTab < SIZE && colTab >= 0 && colTab < SIZE) {
+                if(habilidade[i][j] == 1 && tabuleiro[linhaTab][colTab] == 0) {
+                    tabuleiro[linhaTab][colTab] = 5; // Marca a área afetada
+                }
+            }
+        }
+    }
+}
