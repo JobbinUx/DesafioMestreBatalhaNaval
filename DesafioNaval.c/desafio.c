@@ -14,3 +14,13 @@ void exibirTabuleiro(int tabuleiro[SIZE][SIZE]) {
     }
     printf("\n");
 }
+
+// Função para sobrepor a matriz de habilidade ao tabuleiro
+void aplicarHabilidade(int tabuleiro[SIZE][SIZE], int habilidade[5][5], int origemLinha, int origemColuna) {
+    int tamanho = 5;
+    int meio = tamanho / 2;
+
+    for(int i = 0; i < tamanho; i++) {
+        for(int j = 0; j < tamanho; j++) {
+            int linhaTab = origemLinha - meio + i;
+            int colTab = origemColuna - meio + j;
