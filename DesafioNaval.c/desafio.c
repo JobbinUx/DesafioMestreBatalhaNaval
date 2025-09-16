@@ -71,3 +71,16 @@ int main() {
             else octaedro[i][j] = 0;
         }
     }
+
+     // Aplicar habilidades no tabuleiro
+    aplicarHabilidade(tabuleiro, cone, 1, 2);     // origem do cone
+    aplicarHabilidade(tabuleiro, cruz, 4, 4);     // origem da cruz
+    aplicarHabilidade(tabuleiro, octaedro, 6, 6); // origem do octaedro
+
+    // Exibir tabuleiro final
+    exibirTabuleiro(tabuleiro);
+
+    return 0;
+}
+
+//Feito testes, não houve erros.
