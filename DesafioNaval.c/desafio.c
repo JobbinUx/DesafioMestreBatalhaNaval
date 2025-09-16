@@ -61,3 +61,13 @@ int main() {
             else cruz[i][j] = 0;
         }
     }
+
+     // Matriz de habilidade Octaedro (5x5)
+    int octaedro[5][5];
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j < 5; j++) {
+            if(i + j == 2 || j - i == 2 || i - j == 2 || i + j == 6) octaedro[i][j] = 1;
+            else if(i == 2 || j == 2) octaedro[i][j] = 1; // inclui o centro e cruz
+            else octaedro[i][j] = 0;
+        }
+    }
