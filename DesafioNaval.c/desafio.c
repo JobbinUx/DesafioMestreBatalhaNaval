@@ -34,3 +34,11 @@ void aplicarHabilidade(int tabuleiro[SIZE][SIZE], int habilidade[5][5], int orig
         }
     }
 }
+
+int main() {
+    int tabuleiro[SIZE][SIZE] = {0};
+
+    // Exemplo de navios posicionados manualmente
+    tabuleiro[2][2] = 3;
+    tabuleiro[4][4] = 3;
+    tabuleiro[6][6] = 3;
